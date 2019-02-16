@@ -5,5 +5,5 @@ In this step Docker is up and running. A first image has been already pulled. Yo
 Along other images the `busybox` image should be displayed.
 
 An image name consists of several parts:
-- image name: here busybox
-- tag: specifies a special version, defaults ton'latest'
+- image name: here `busybox`
+- tag: specifies a special version, defaults to `latest`
