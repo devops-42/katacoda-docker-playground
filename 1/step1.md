@@ -2,7 +2,7 @@ In this step Docker is up and running. A first image has been already pulled. Yo
 
 `docker images`{{execute}}
 
-The `busybox` image should be displayed.
+Along other images the `busybox` image should be displayed.
 
 An image name consists of several parts:
 - image name: here busybox

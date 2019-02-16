@@ -14,6 +14,7 @@
 		},
        {
            "title": "Pull Nginx image",
+           "verify": "step2-verify.sh",
            "text": "step2.md"
        }],
 		"intro": {
