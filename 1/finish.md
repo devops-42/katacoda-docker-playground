@@ -1,0 +1,1 @@
+In this scenario we learned, how to pull Docker images, list them and create containers based on them.

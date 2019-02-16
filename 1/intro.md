@@ -1,0 +1,1 @@
+In this scenario we learn to use basic Docker commands, such as `docker pull` or `docker images`.
