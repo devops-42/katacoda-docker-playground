@@ -6,5 +6,5 @@ and see, whether the image has been stored locally:
 
 `docker images`{{execute}}
 
-What happened? The Docker daemon contacted the default registry (i.e. Docker hub) and checked, whether an images exists with the id 'nginx'
-We didn‘t specify a special tag so the daemon requested to pull the 'latest' tag.
+What happened? The Docker daemon contacted the default registry ([Docker hub](https://hub.docker.com)) and checked, whether an image exists with the name `nginx`.
+We didn‘t specify a special image version, thus Docker requested to pull the `latest` tag.
