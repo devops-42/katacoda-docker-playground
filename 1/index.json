@@ -1,0 +1,25 @@
+{
+	"backend": {
+		"imageid": "docker"
+	},
+	"environment": {
+		"uilayout": "terminal",
+		"hideintro": false,
+		"hidefinish": false
+	},
+	"details": {
+		"steps": [{
+			"title": "Pull Docker image",
+			"text": "step1.md"
+		}],
+		"intro": {
+			"courseData": "env-init.sh",
+			"text": "intro.md"
+		},
+		"finish": {
+			"text": "finish.md"
+		}
+	},
+	"title": "Pull and Run",
+	"description": "In this exercise a Docker image will be pulled and started as container."
+}
