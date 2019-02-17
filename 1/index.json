@@ -12,11 +12,16 @@
 			"title": "View pulled Docker image",
 			"text": "step1.md"
 		},
-       {
+        {
            "title": "Pull Nginx image",
            "verify": "step2-verify.sh",
            "text": "step2.md"
-       }],
+        },
+		{
+			"title": "Pull specific tag of Nginx image",
+			"verify": "step3-verify.sh",
+			"text": "step3.md"
+		}],
 		"intro": {
 			"courseData": "env-init.sh",
 			"text": "intro.md"
