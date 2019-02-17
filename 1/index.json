@@ -21,6 +21,11 @@
 			"title": "Pull specific tag of Nginx image",
 			"verify": "step3-verify.sh",
 			"text": "step3.md"
+		},
+		{
+			"title": "Create and run container",
+			"verify": "step4-verify.sh",
+			"text": "step4.md"
 		}],
 		"intro": {
 			"courseData": "env-init.sh",

@@ -1,0 +1,1 @@
+docker ps -a | grep nginx | grep "Exited" && echo "done"
