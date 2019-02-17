@@ -1,4 +1,4 @@
-Using the latest and greatest versions is fine, but in practise you may have the need to use a specific application version. Here image tags comes into play. 
+Using the latest and greatest versions is fine, but in practise you may have the need to use a specific application version. Here image tags come into play. 
 Issue the following command to pull the version 1.10 of Nginx:
 
 `docker pull nginx:1.10-alpine`{{execute}}
