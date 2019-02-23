@@ -1,2 +1,1 @@
-#!/bin/bash
-docker ps -a | grep nginx && echo "done"
+docker ps -a | grep ited && echo "done"
