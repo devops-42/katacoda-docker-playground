@@ -10,9 +10,7 @@ As suggested in the output of the "Hello, World" example we try a more ambitious
 
 `docker run nginx`{{execute}}
 
-It seems that nothing happens, no output at all. Abort the `run` command by hitting:
-
-`<CTRL-c>` 
+It seems that nothing happens, no output at all. Abort the `run` command by hitting <kbd>⌃ Control</kbd>-<kbd>c</kbd> 
 
 What happened? The Docker daemon created a container base on the parameter we specified in the `docker run` command. We only specified the image name, thus the container has been started in foreground (default behaviour).
 We can verify that the container had been started with the `docker ps` command:

@@ -23,9 +23,13 @@
 			"text": "step3.md"
 		},
 		{
-			"title": "Create and run container",
+			"title": "Create and run container (1)",
 			"verify": "step4-verify.sh",
 			"text": "step4.md"
+		},
+		{
+			"title": "Create and run container (2)",
+			"text": "step5.md"
 		}],
 		"intro": {
 			"courseData": "env-init.sh",
