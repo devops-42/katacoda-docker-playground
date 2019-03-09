@@ -1,33 +1,33 @@
-Now we run our first Docker container. The command used is `docker run`. The first example is very simple and well-known: "Hello World":
+In the last step we just started a container without any customiziation. Let's have a look at the `docker run` options. At first we'll start the container in detached mode:
 
-`docker run hello-world`{{execute}}
+`docker run --name web -d nginx`{{execute}}
 
-The container starts, prints a message and exits.
-
-Note, that the `run` command checks automatically whether the image to run has been pulled already. In our case we did not pull the images `hello-world` yet, so an image pull will be triggered.
-
-As suggested in the output of the "Hello, World" example we try a more ambitious example. Back to our Nginx image pulled in the steps before we want to start a container from the `latest` Nginx image:
-
-`docker run nginx`{{execute}}
-
-It seems that nothing happens, no output at all. Abort the `run` command by hitting <kbd>⌃ Control</kbd>-<kbd>c</kbd> 
-
-What happened? The Docker daemon created a container base on the parameter we specified in the `docker run` command. We only specified the image name, thus the container has been started in foreground (default behaviour).
-We can verify that the container had been started with the `docker ps` command:
+The container starts up, the docker daemon returns a unique hash. We check the container's run state by the already known command:
 
 `docker ps`{{execute}}
 
-This command gives status information about running containers, such as:
-- CONTAINER ID: A unique container id (generated)
-- IMAGE: Image name (and tag)
-- COMMAND: Started process in container (we'll cover this later)
-- CREATED: When created
-- STATUS: Current status
-- PORTS: Exposed ports (we'll cover this in the next exercise)
-- NAMES: Generated alias name (we'll cover this in the next exercise)
+The `CONTAINER ID` coincide with the first 12 characters of the printed hash. Unlike the previous example the `NAME` column now contains a user-define name `web`, which we assigned through the flag `--name`. User-defined names facilitates the work with running containers.
 
-Our Nginx container is stopped, so we need to use the `-a` (all) flag to include stopped container in the output:
+In the `PORTS` column we see, that the Nginx running inside the container exposes a port 80 for HTTP access. In order to access the port from the outside the container, we need to add more options to the `docker run` command. At first we need to stop the running container:
+
+`docker stop <CONTAINER ID>`
+
+To simplify the stopping process we just `grep` it from the list of running containers:
+
+`docker stop $(docker ps | grep nginx | awk '{print $1}')`
+
+But wait, didn't we talk about user-defined names? So we can use the more simplistic command:
+
+`docker stop web`{{execute}}
+
+The Nginx container is stopped, check it by issuing:
 
 `docker ps -a`{{execute}}
 
-Note the `Exited` status.
+Now re-run the container and assign a port for outside access:
+
+`docker run --name web -d -p 80:80 nginx`{{execute}}
+
+Verify, whether Nginx is accessible from outside:
+
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/

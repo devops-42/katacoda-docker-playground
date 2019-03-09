@@ -9,26 +9,26 @@
 	},
 	"details": {
 		"steps": [{
-			"title": "View pulled Docker image",
+			"title": "Image pull (1)",
+			"verify": "step2-verify.sh",
 			"text": "step1.md"
 		},
-        {
-           "title": "Pull Nginx image",
-           "verify": "step2-verify.sh",
-           "text": "step2.md"
-        },
 		{
-			"title": "Pull specific tag of Nginx image",
+			"title": "Image pull (2)",
+			"verify": "step2-verify.sh",
+			"text": "step2.md"
+		},
+		{
+			"title": "Create and run container (1)",
 			"verify": "step3-verify.sh",
 			"text": "step3.md"
 		},
 		{
-			"title": "Create and run container (1)",
-			"verify": "step4-verify.sh",
+			"title": "Create and run container (2)",
 			"text": "step4.md"
 		},
 		{
-			"title": "Create and run container (2)",
+			"title": "Cleanup container and images",
 			"text": "step5.md"
 		}],
 		"intro": {

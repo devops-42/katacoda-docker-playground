@@ -1,12 +1,33 @@
-Using the latest and greatest versions is fine, but in practise you may have the need to use a specific application version. Here image tags come into play. 
-Issue the following command to pull the version 1.10 of Nginx:
+Now we run our first Docker container. The command used is `docker run`. The first example is very simple and well-known: "Hello World":
 
-`docker pull nginx:1.10-alpine`{{execute}}
+`docker run hello-world`{{execute}}
 
-Verify that the image has been stored locally:
+The container starts, prints a message and exits.
 
-`docker images`{{execute}}
+Note, that the `run` command checks automatically whether the image to run has been pulled already. In our case we did not pull the images `hello-world` yet, so an image pull will be triggered.
 
-What happened? The Docker daemon contacted the default registry ([Dockerhub](https://hub.docker.com)) and checked, whether an image exists with the name `nginx` and the tag `1.10-alpine`.
+As suggested in the output of the "Hello, World" example we try a more ambitious example. Back to our Nginx image pulled in the steps before we want to start a container from the `latest` Nginx image:
 
-Note the `-alpine` extension: Most images specify the OS variant of the base image in their tags. Here Nginx runs on an Alpine Linux images. We'll cover the OS base images later.
+`docker run nginx`{{execute}}
+
+It seems that nothing happens, no output at all. Abort the `run` command by hitting <kbd>⌃ Control</kbd>-<kbd>c</kbd> 
+
+What happened? The Docker daemon created a container base on the parameter we specified in the `docker run` command. We only specified the image name, thus the container has been started in foreground (default behaviour).
+We can verify that the container had been started with the `docker ps` command:
+
+`docker ps`{{execute}}
+
+This command gives status information about running containers, such as:
+- CONTAINER ID: A unique container id (generated)
+- IMAGE: Image name (and tag)
+- COMMAND: Started process in container (we'll cover this later)
+- CREATED: When created
+- STATUS: Current status
+- PORTS: Exposed ports (we'll cover this in the next exercise)
+- NAMES: Generated alias name (we'll cover this in the next exercise)
+
+Our Nginx container is stopped, so we need to use the `-a` (all) flag to include stopped container in the output:
+
+`docker ps -a`{{execute}}
+
+Note the `Exited` status.
