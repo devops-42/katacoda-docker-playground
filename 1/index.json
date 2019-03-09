@@ -10,7 +10,7 @@
 	"details": {
 		"steps": [{
 			"title": "Image pull (1)",
-			"verify": "step2-verify.sh",
+			"verify": "step1-verify.sh",
 			"text": "step1.md"
 		},
 		{
