@@ -22,7 +22,7 @@ Verify that the container has removed:
 
 The container has been removed, but the corresponding image remains. Docker doesn't remove an image automatically, so we have to do it manually. First get the image list and filter the nginx:
 
-`docker images nginx`{{execute}}`
+`docker images nginx`{{execute}}
 
 Docker should list at least two images:
 
@@ -32,7 +32,7 @@ Docker should list at least two images:
 
 If we don't need the image `nginx:1.10-alpine` it can be removed with the following command:
 
-`docker rmi nginx:1.10-alpine`
+`docker rmi nginx:1.10-alpine`{{execute}}
 
 The output should be similar to:
 
