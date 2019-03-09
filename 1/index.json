@@ -20,7 +20,6 @@
 		},
 		{
 			"title": "Create and run container (1)",
-			"verify": "step3-verify.sh",
 			"text": "step3.md"
 		},
 		{

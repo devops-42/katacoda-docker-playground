@@ -23,12 +23,12 @@ The container starts up, the docker daemon returns a unique hash. We can verify 
 `docker ps`{{execute}}
 
 This command gives status information about running containers, such as:
-- CONTAINER ID: A unique container id (generated)
-- IMAGE: Image name (and tag)
-- COMMAND: Started process in container (we'll cover this later)
-- CREATED: When created
-- STATUS: Current status
-- PORTS: Exposed ports (we'll cover this in the next exercise)
-- NAMES: Generated alias name (we'll cover this in the next exercise)
+- `CONTAINER ID`: A unique container id (generated)
+- `IMAGE`: Image name (and tag)
+- `COMMAND`: Started process in container (we'll cover this later)
+- `CREATED`: When created
+- `STATUS`: Current status
+- `PORTS`: Exposed ports (we'll cover this in the next exercise)
+- `NAMES`: Generated alias name (we'll cover this in the next exercise)
 
 Note, that the `CONTAINER ID` coincide with the first 12 characters of the hash value returned after `docker run ...`.
