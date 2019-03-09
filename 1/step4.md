@@ -20,7 +20,7 @@ We check the container's state by the already known command:
 
 `docker ps`{{execute}}
 
-Unlike the previous example the `NAME` column now contains the user-defined name `web`.
+Unlike the previous example the `NAMES` column now contains the user-defined name `web`.
 
 In the `PORTS` column we see, that the Nginx running inside the container exposes a port 80 for HTTP access. In order to access the port from the outside the container, we need to add more options to the `docker run` command. Stop the container again:
 
@@ -30,9 +30,9 @@ The Nginx container is stopped, check it by issuing:
 
 `docker ps -a`{{execute}}
 
-Now re-run the container and assign a port for outside access:
+Now re-run the container, assign a new name and a port for outside access:
 
-`docker run --name web -d -p 80:80 nginx`{{execute}}
+`docker run --name webwithport -d -p 80:80 nginx`{{execute}}
 
 Verify, whether Nginx is accessible from outside:
 

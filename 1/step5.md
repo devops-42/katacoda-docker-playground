@@ -2,9 +2,9 @@ Now we're able to start/stop containers. As we saw in the last example, stopped 
 
 `docker ps`{{execute}}
 
-Now we stop our `web` container again:
+Now we stop our `webwithport` container:
 
-`docker stop web`{{execute}}
+`docker stop webwithport`{{execute}}
 
 Verify that the container has stopped:
 
@@ -12,13 +12,13 @@ Verify that the container has stopped:
 
 The `STATUS` column should indicate `Exited`. To delete the container just issue:
 
-`docker rm web`{{execute}}
+`docker rm webwithport`{{execute}}
 
-Docker prints out the name of the deleted container as a confirmation, here: `web`
+Docker prints out the name of the deleted container as a confirmation, here: `webwithport`
 
 Verify that the container has removed:
 
-`docker ps -a | grep web`{{execute}}
+`docker ps -a | grep webwithport`{{execute}}
 
 The container has been removed, but the corresponding image remains. Docker doesn't remove an image automatically, so we have to do it manually. First get the image list and filter the nginx:
 
