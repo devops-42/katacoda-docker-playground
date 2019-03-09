@@ -1,4 +1,4 @@
-In the last step we just started a container without any customiziation. Let's have a look at the `docker run` options. At first we'll start the container in detached mode:
+In the last step we just started a container without any customization. Let's have a look at the `docker run` options. At first we'll start the container in detached mode:
 
 `docker run --name web -d nginx`{{execute}}
 
