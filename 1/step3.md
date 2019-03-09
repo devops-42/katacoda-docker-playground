@@ -18,7 +18,7 @@ To start the container in `detached` mode add the flag `-d`:
 
 `docker run -d nginx`{{execute}}
 
-We can verify that the container had been started with the `docker ps` command:
+The container starts up, the docker daemon returns a unique hash. We can verify that the container had been started with the `docker ps` command:
 
 `docker ps`{{execute}}
 
@@ -31,16 +31,4 @@ This command gives status information about running containers, such as:
 - PORTS: Exposed ports (we'll cover this in the next exercise)
 - NAMES: Generated alias name (we'll cover this in the next exercise)
 
-The container can be stopped by the following command:
-
-`docker stop <CONTAINER ID>`
-
-which is for our example:
-
-`docker stop $(docker ps | grep nginx | awk '{print $1}')`{{execute}}`
-
-Our Nginx container is stopped, so we need to use the `-a` (all) flag to include stopped container in the output:
-
-`docker ps -a`{{execute}}
-
-Note the `Exited` status.
+Note, that the `CONTAINER ID` coincide with the first 12 characters of the hash value returned after `docker run ...`.

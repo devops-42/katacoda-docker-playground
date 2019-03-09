@@ -1,1 +1,0 @@
-docker ps -a | grep ited && echo "done"
