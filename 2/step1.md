@@ -4,8 +4,7 @@ At first we create a directory in which we store our compose file:
 
 Copy the content of this file into the editor:
 
-<pre class="file" data-filename="tutorial/docker-compose.yml" data-target="replace">
-version: '3'
+<pre class="file" data-filename="docker-compose.yml" data-target="replace">version: '3'
 services:
   nginx: 
     image: nginx:latest
