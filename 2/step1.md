@@ -1,6 +1,6 @@
 At first we create a directory in which we store our compose file:
 
-`mkdir ~/compose && cd ~/compose`{{execute}}
+`cd ~/tutorial`{{execute}}
 
 Copy the content of this file into the editor:
 
