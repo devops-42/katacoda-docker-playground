@@ -1,0 +1,1 @@
+In this scenario we learn how to work with docker-compose.

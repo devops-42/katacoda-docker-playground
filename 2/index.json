@@ -1,0 +1,25 @@
+{
+	"backend": {
+		"imageid": "docker"
+	},
+	"environment": {
+		"uilayout": "editor-terminal",
+		"hideintro": false,
+		"hidefinish": false
+	},
+	"details": {
+		"steps": [{
+			"title": "Docker compose",
+			"text": "step1.md"
+		}],
+		"intro": {
+			"courseData": "env-init.sh",
+			"text": "intro.md"
+		},
+		"finish": {
+			"text": "finish.md"
+		}
+	},
+	"title": "Docker compose",
+	"description": "In this exercise handling with docker-compose will be introduced"
+}
