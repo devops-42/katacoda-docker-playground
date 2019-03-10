@@ -1,11 +1,16 @@
-<pre class="file" data-filename="app.js" data-target="replace">var http = require('http');
-var requestListener = function (req, res) {
-  res.writeHead(200);
-  res.end('Hello, World!');
-}
-
-var server = http.createServer(requestListener);
-server.listen(3000, function() { console.log("Listening on port 3000")});
+<pre class="file" data-filename="./docker-compose.yml" data-target="replace">
+version: '3'
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: web
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+      - 443:443
 </pre>
 
-Allow a code block to be copied `some-command`{{copy}}
+To start run:
+
+`docker-compose up -d`{{execute}}
