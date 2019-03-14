@@ -3,9 +3,14 @@
 	"description": "In this exercise handling with docker-compose will be introduced",
 	"details": {
 		"steps": [{
-			"title": "Docker images",
+			"title": "Docker images (Commit)",
 			"text": "step1.md"
-		}],
+		},
+		{
+			"title": "Docker images (Build)",
+			"text": "step2.md"
+		}
+		],
 		"intro": {
 			"text": "intro.md"
 		},
