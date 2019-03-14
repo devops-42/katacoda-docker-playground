@@ -5,7 +5,7 @@
 	"files": ["Dockerfile"],
 	"environment": {
 		"uilayout": "editor-terminal",
-		"uieditorpath": "/root/",
+		"uieditorpath": "/root/build",
 		"hideintro": false,
 		"hidefinish": false
 	},
