@@ -36,6 +36,10 @@ Issue a curl command, which we installed according to the `Dockerfile`:
 
 `curl google.com`{{execute}}
 
+Exit the container:
+
+`exit`{{execute}}
+
 If we need additional packages (e.g. a text editor like `nano`) we have several possibilities:
 * Install the package and commit the image
 * Add the package to the `Dockerfile` and run the build again
@@ -54,4 +58,12 @@ Build the image again:
 
 `docker build -t dockerfundamentals-curl:alpine .`{{execute}}
 
-Verify, whether the image appears in the list of locally available Docker images:
+You will see, that build step 1-3 will perform fast. There were no changes, therefore these layers have been cached locally. Run the image again:
+
+`docker run -ti dockerfundamentals-curl:alpine /bin/sh`{{execute}}
+
+and try to start `nano`:
+
+`nano`{{execute}}
+
+Exit from `nano` by hitting <kbd>⌃CTRL</kbd>-<kbd>x</kbd> 
