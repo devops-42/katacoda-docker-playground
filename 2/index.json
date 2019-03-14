@@ -13,10 +13,17 @@
 			"text": "finish.md"
 		}
 	},
-	"files": ["Dockerfile"],
+	"assets": {
+		"client": [
+			{
+				"file": "Dockerfile",
+				"target": "/home/scrapbook/tutorial"
+			}
+		]
+	},
 	"environment": {
 		"uilayout": "editor-terminal",
-		"uieditorpath": "/root/build",
+		"uieditorpath": "/home/scrapbook/tutorial",
 		"hideuieditortree": true,
 		"hideintro": false,
 		"hidefinish": false
