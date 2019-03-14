@@ -6,9 +6,11 @@ Copy the content of this file into the editor:
 
 ARG VERSION_STRING
                                                                  
-RUN echo "Building version ${VERSION_STRING}
+RUN echo "Building version ${VERSION_STRING}"
 </pre>
 
-Issue the `docker build` command with the parameter `--buildarg`:
+Issue the `docker build` command with the parameter `--buil-darg`:
 
-`docker build --buildarg VERSION_STRING=1.0 -t dockerfundamentals-echo:alpine .`{{execute}}
+`docker build --build-arg VERSION_STRING=1.0 -t dockerfundamentals-echo:alpine .`{{execute}}
+
+During the build process the message `Building version 1.0` should appear.
