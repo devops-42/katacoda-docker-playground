@@ -38,6 +38,6 @@
 			"text": "finish.md"
 		}
 	},
-	"title": "Pull and Run",
+	"title": "Docker container",
 	"description": "In this exercise a Docker image will be pulled and started as container."
 }

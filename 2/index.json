@@ -2,18 +2,19 @@
 	"backend": {
 		"imageid": "docker"
 	},
+	"files": ["Dockerfile"],
 	"environment": {
 		"uilayout": "editor-terminal",
+		"uieditorpath": "/root/",
 		"hideintro": false,
 		"hidefinish": false
 	},
 	"details": {
 		"steps": [{
-			"title": "Docker compose",
+			"title": "Docker images",
 			"text": "step1.md"
 		}],
 		"intro": {
-			"courseData": "env-init.sh",
 			"text": "intro.md"
 		},
 		"finish": {

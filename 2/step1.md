@@ -1,21 +1,10 @@
-At first we create a directory in which we store our compose file:
+At first we query a list of all installed Docker images:
 
-`cd ~/tutorial`{{execute}}
+`docker images`{{execute}}
 
 Copy the content of this file into the editor:
 
-<pre class="file" data-filename="docker-compose.yml" data-target="replace">version: '3'
-services:
-  nginx: 
-    image: nginx:latest
-    container_name: web
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    ports:
-      - 80:80
-      - 443:443
+<pre class="file" data-filename="docker-compose.yml" data-target="replace">FROM scatch
+
+ENV foo=bar
 </pre>
-
-To start run:
-
-`docker-compose up -d`{{execute}}
