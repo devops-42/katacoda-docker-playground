@@ -1,14 +1,6 @@
 {
-	"backend": {
-		"imageid": "docker"
-	},
-	"files": ["Dockerfile"],
-	"environment": {
-		"uilayout": "editor-terminal",
-		"uieditorpath": "/root/build",
-		"hideintro": false,
-		"hidefinish": false
-	},
+	"title": "Docker images",
+	"description": "In this exercise handling with docker-compose will be introduced",
 	"details": {
 		"steps": [{
 			"title": "Docker images",
@@ -21,6 +13,15 @@
 			"text": "finish.md"
 		}
 	},
-	"title": "Docker compose",
-	"description": "In this exercise handling with docker-compose will be introduced"
+	"files": ["Dockerfile"],
+	"environment": {
+		"uilayout": "editor-terminal",
+		"uieditorpath": "/root/build",
+		"hideuieditortree": true,
+		"hideintro": false,
+		"hidefinish": false
+	},
+	"backend": {
+		"imageid": "docker"
+	}
 }
