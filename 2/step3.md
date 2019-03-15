@@ -39,6 +39,7 @@ Build and run the image:
 `docker run -ti dockerfundamentals-echo:alpine env`{{execute}}
 
 A set of all environment variables should be displayed:
+
 `
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 HOSTNAME=0e31925c68db
@@ -80,3 +81,7 @@ Check the current logged in user:
 The container now runs as `testuser`:
 
 `uid=1000(testuser) gid=1000(testuser)`
+
+Exit the container:
+
+`exit`{{execute}}

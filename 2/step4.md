@@ -51,6 +51,8 @@ Issue the `docker build` command with the parameter `--buil-darg`:
 
 Run the image, the container should ping the localhost three times.
 
+`docker run -ti dockerfundamentals-echo:alpine /bin/sh`{{execute}}
+
 
 ### `ENTRYPOINT` and `CMD` combined
 
