@@ -18,9 +18,9 @@ CMD ["/entrypoint.sh"]
 
 Build and run:
 
-`docker build  -t dockerfundamentals-nc:alpine . && docker run -d -p 80:8080:1234 dockerfundamentals-nc:alpine`{{execute}}
+`docker build  -t dockerfundamentals-nc:alpine . && docker run -d -p 80:8080 dockerfundamentals-nc:alpine`{{execute}}
 
 Test whether the port is accessible from outside:
 
-https://[[HOST_SUBDOMAIN]]-1234-[[KATACODA_HOST]].environments.katacoda.com/
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
 
