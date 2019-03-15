@@ -1,6 +1,4 @@
-At first we create a directory in which we store our compose file:
-
-`cd ~/tutorial`{{execute}}
+For the tool `docker-compose` everything is described in a file named `docker-compose.yml`.
 
 Copy the content of this file into the editor:
 

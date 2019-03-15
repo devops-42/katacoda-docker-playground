@@ -1,25 +1,34 @@
 {
-	"backend": {
-		"imageid": "docker"
-	},
-	"environment": {
-		"uilayout": "editor-terminal",
-		"hideintro": false,
-		"hidefinish": false
-	},
+	"title": "Docker Compose",
+	"description": "In this exercise handling with docker-compose will be introduced",
 	"details": {
-		"steps": [{
-			"title": "Docker compose",
-			"text": "step1.md"
-		}],
+		"steps": [
+			{
+			  "title": "Docker images - Commit",
+			  "text": "step1.md"
+		  }
+		],
 		"intro": {
-			"courseData": "env-init.sh",
 			"text": "intro.md"
 		},
 		"finish": {
 			"text": "finish.md"
-		}
+		},
+		"assets": { "client": [
+			{
+				"file": "README.md", "target": "~/"
+			}
+		]}
 	},
-	"title": "Docker compose",
-	"description": "In this exercise handling with docker-compose will be introduced"
+	"files": ["docker-compose.yml"],
+	"environment": {
+		"uilayout": "editor-terminal",
+		"uieditorpath": "/home/scrapbook/tutorial",
+		"hideuieditortree": true,
+		"hideintro": false,
+		"hidefinish": false
+	},
+	"backend": {
+		"imageid": "docker"
+	}
 }
