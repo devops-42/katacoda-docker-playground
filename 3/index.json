@@ -15,7 +15,7 @@
 		"finish": {
 			"text": "finish.md"
 		},
-		"assets": { "client": [
+		"assets": { "host01": [
 			{
 				"file": "default.conf", "target": "~/tutorial/conf.d/"
 			}
