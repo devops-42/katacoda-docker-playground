@@ -14,9 +14,9 @@
 		"finish": {
 			"text": "finish.md"
 		},
-		"assets": { "host01": [
+		"assets": { "client": [
 			{
-				"file": "nginx.conf", "target": "~/"
+				"file": "nginx.conf", "target": "~/nginx/"
 			}
 		]}
 	},
