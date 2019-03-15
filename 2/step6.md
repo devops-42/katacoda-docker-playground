@@ -31,7 +31,7 @@ The container prints out a list of files within the mount point `/myvol`
 
 To use this volume with another container we build a second image:
 
-pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
+<pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
 
 RUN mkdir /myvol
 
@@ -42,4 +42,6 @@ ENTRYPOINT ["ls", "-l", "/myvol"]
 
 Build and run again:
 
-`docker build  -t dockerfundamentals-vol2:alpine . && docker run dockerfundamentals-vol2:alpine`{{execute}}
+`docker build  -t dockerfundamentals-vol2:alpine . && docker run -v myvol:/myvol dockerfundamentals-vol2:alpine`{{execute}}
+
+Pay attention on the `-v` flag: It mounts a volume into a defined mount path on the container. The container should list all files within the volume.
