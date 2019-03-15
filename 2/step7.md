@@ -18,7 +18,7 @@ CMD while true ; do  echo -e "HTTP/1.1 200 OK\n\n $(date)" | nc -l -p 1234  ; do
 
 Build and run:
 
-`docker build  -t dockerfundamentals-nc:alpine . && docker run dockerfundamentals-nc:alpine`{{execute}}
+`docker build  -t dockerfundamentals-nc:alpine . && docker run -d -p 1234:1234 dockerfundamentals-nc:alpine`{{execute}}
 
 Test whether the port is accessible from outsid:
 
