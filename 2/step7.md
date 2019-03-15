@@ -8,19 +8,19 @@ In our example we construct a very simplistic web server (not recommended for pr
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
 
-RUN apk update && \
-    apk add netcat-openbsd
-
 EXPOSE 1234
 
-CMD while true ; do  echo -e "HTTP/1.1 200 OK\n\n $(date)" | nc -l -p 1234  ; done
+RUN echo "while :; do { echo -e 'HTTP/1.1 200 OK\r\n'; date } | nc -l 8080; done" > /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+CMD ["/entrypoint.sh"]
 </pre>
 
 Build and run:
 
 `docker build  -t dockerfundamentals-nc:alpine . && docker run -d -p 1234:1234 dockerfundamentals-nc:alpine`{{execute}}
 
-Test whether the port is accessible from outsid:
+Test whether the port is accessible from outside:
 
 https://[[HOST_SUBDOMAIN]]-1234-[[KATACODA_HOST]].environments.katacoda.com/
 
