@@ -8,17 +8,17 @@ In our example we construct a very simplistic web server (not recommended for pr
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
 
-EXPOSE 1234
-
-RUN echo "while :; do { echo -e 'HTTP/1.1 200 OK\r\n'; date } | nc -l 8080; done" > /entrypoint.sh
+ADD entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+
+EXPOSE 8080
 
 CMD ["/entrypoint.sh"]
 </pre>
 
 Build and run:
 
-`docker build  -t dockerfundamentals-nc:alpine . && docker run -d -p 1234:1234 dockerfundamentals-nc:alpine`{{execute}}
+`docker build  -t dockerfundamentals-nc:alpine . && docker run -d -p 80:8080:1234 dockerfundamentals-nc:alpine`{{execute}}
 
 Test whether the port is accessible from outside:
 

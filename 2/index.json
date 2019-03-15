@@ -37,7 +37,14 @@
 		"finish": {
 			"text": "finish.md"
 		},
-		"assets": { "client": [{"file": "README.md", "target": "~/"}] }
+		"assets": { "client": [
+			{
+				"file": "README.md", "target": "~/"
+			},
+			{
+				"file": "entrypoint.sh", "target": "~/"
+			}
+		]}
 	},
 	"files": ["Dockerfile"],
 	"environment": {
