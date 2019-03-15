@@ -1,1 +1,1 @@
-mkdir -p ~/conf.d
+docker pull busybox
