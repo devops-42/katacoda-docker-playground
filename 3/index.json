@@ -9,8 +9,9 @@
 		  }
 		],
 		"intro": {
-			"text": "intro.md"
-		},
+			"text": "intro.md",
+      "courseData": "env-init.sh"
+    },
 		"finish": {
 			"text": "finish.md"
 		},
