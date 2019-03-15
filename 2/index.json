@@ -27,7 +27,7 @@
 		}
 	},
 	"files": ["Dockerfile"],
-  "assets": { "client": [{"file": "README.md", "target": "/home/scrapbook/tutorial"}] },
+  "assets": { "client": [{"file": "README.md", "target": "~/"}] },
 	"environment": {
 		"uilayout": "editor-terminal",
 		"uieditorpath": "/home/scrapbook/tutorial",
