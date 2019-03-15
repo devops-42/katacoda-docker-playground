@@ -24,10 +24,10 @@
 		},
 		"finish": {
 			"text": "finish.md"
-		}
+		},
+		"assets": { "client": [{"file": "README.md", "target": "~/"}] }
 	},
 	"files": ["Dockerfile"],
-  "assets": { "host01": [{"file": "README.md", "target": "~/"}] },
 	"environment": {
 		"uilayout": "editor-terminal",
 		"uieditorpath": "/home/scrapbook/tutorial",
