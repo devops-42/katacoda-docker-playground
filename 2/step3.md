@@ -32,4 +32,41 @@ Build and run the image:
 
 `docker build --build-arg VERSION_STRING=1.1 -t dockerfundamentals-echo:alpine .`{{execute}}
 
-`docker run -ti dockerfundamentals-echo:alpine /bin/sh -c echo $JAVA_HOME`{{execute}}
+`docker run -ti dockerfundamentals-echo:alpine env`{{execute}}
+
+A set of all environment variables should be displayed:
+`
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=0e31925c68db
+TERM=xterm
+JAVA_HOME=/usr/lib/jvm/java
+HOME=/root
+`
+
+As you might recognize the container runs with user `root`. To avoid security issues it is recommended to switch to another user. The user can be create during the image build. To switch the user you can use the `USER` directive.
+
+Copy the content of this file into the editor:
+
+<pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
+
+ARG VERSION_STRING
+
+ENV JAVA_HOME=/usr/lib/jvm/java
+                                                                 
+RUN echo "Building version ${VERSION_STRING}"
+
+RUN adduser -u 1000 -G testuser -D -h /home/testuser -g "Test User" testuser
+
+USER testuser
+
+</pre>
+
+Build and run the image:
+
+`docker build --build-arg VERSION_STRING=1.1 -t dockerfundamentals-echo:alpine .`{{execute}}
+
+`docker run -ti dockerfundamentals-echo:alpine /bin/sh`{{execute}}
+
+Check the current logged in user:
+
+`id`{{execute}}
