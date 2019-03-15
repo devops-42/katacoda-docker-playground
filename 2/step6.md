@@ -25,7 +25,7 @@ ENTRYPOINT ["ls", "-l", "/myvol"]
 
 Build and run:
 
-`docker build  -t dockerfundamentals-vol1:alpine . && docker run dockerfundamentals-vol1:alpine`{{execute}}
+`docker build  -t dockerfundamentals-vol1:alpine . && docker run -v myvol:/myvol dockerfundamentals-vol1:alpine`{{execute}}
 
 The container prints out a list of files within the mount point `/myvol`
 
