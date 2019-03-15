@@ -55,7 +55,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java
                                                                  
 RUN echo "Building version ${VERSION_STRING}"
 
-RUN adduser -u 1000 -G testuser -D -h /home/testuser -g "Test User" testuser
+RUN adduser -u 1000 -D -h /home/testuser -g "Test User" testuser
 
 USER testuser
 
@@ -70,3 +70,7 @@ Build and run the image:
 Check the current logged in user:
 
 `id`{{execute}}
+
+The container now runs as `testiser`:
+
+`uid=1000(testuser) gid=1000(testuser)`
