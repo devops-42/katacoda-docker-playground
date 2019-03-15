@@ -1,4 +1,6 @@
-Image build can be parameterized. This is achieved by the `ARG` directive.
+#### `ARG`
+
+Image builds can be parameterized. This is achieved by the `ARG` directive.
 
 Copy the content of this file into the editor:
 
@@ -14,6 +16,8 @@ Issue the `docker build` command with the parameter `--buil-darg`:
 `docker build --build-arg VERSION_STRING=1.0 -t dockerfundamentals-echo:alpine .`{{execute}}
 
 During the build process the message `Building version 1.0` should appear.
+
+#### `ENV`
 
 In order to preset some environment variables you can use the `ENV` keyword.
 
@@ -43,6 +47,8 @@ JAVA_HOME=/usr/lib/jvm/java
 HOME=/root
 `
 
+#### `USER`
+
 As you might recognize the container runs with user `root`. To avoid security issues it is recommended to switch to another user. The user can be create during the image build. To switch the user you can use the `USER` directive.
 
 Copy the content of this file into the editor:
@@ -71,6 +77,6 @@ Check the current logged in user:
 
 `id`{{execute}}
 
-The container now runs as `testiser`:
+The container now runs as `testuser`:
 
 `uid=1000(testuser) gid=1000(testuser)`

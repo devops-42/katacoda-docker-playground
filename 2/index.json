@@ -7,13 +7,17 @@
 			"text": "step1.md"
 		},
 		{
-			"title": "Docker images - Build (1)",
+			"title": "Docker images - Build",
 			"text": "step2.md"
 		},
     {
-      "title": "Docker images - Build (2)",
+      "title": "Docker images - Dockerfile (1)",
       "text": "step3.md"
-    }
+    },
+		{
+			"title": "Docker images - Dockerfile (2)",
+			"text": "step4.md"
+		}
 		],
 		"intro": {
 			"text": "intro.md"

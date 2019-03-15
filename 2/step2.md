@@ -1,4 +1,20 @@
-Committng Docker images is fine for short-term changes or test scenarios. In the step we take a look at building reproducable Docker images. First we need a file in which all build steps are described. This file is called `Dockerfile`.
+Committng Docker images is fine for short-term changes or test scenarios. In the step we take a look at building reproducable Docker images. Docker provides us with a `Dockerfile`, by means of which a complete image can be built from.
+
+The `Dockerfile` supports a set of directives, which will be explained in the next sections.
+
+#### `FROM`
+
+`FROM` indicates the parent image, from which the new images is inherited. Most OS vendors provide base images like:
+
+* `centos:<VERSION>`
+* `debian:<VERSION>`
+* `alpine:<VERSION>`
+
+If you want to build a base image by yourself you may use the directive `FROM scratch`
+
+#### `RUN`
+
+By means of `RUN` you may execute some commands during the build process. Usually you want to add some packages to your image.
 
 Copy the content of this file into the editor:
 
@@ -67,3 +83,5 @@ and try to start `nano`:
 `nano`{{execute}}
 
 Exit from `nano` by hitting <kbd>⌃CTRL</kbd>-<kbd>x</kbd> 
+
+The third variant is left as an exercise to the reader.
