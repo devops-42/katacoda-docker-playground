@@ -1,1 +1,1 @@
-mkdir -p ~/conf.d
+mkdir -p ~/tutorial/conf.d

@@ -17,7 +17,7 @@
 		},
 		"assets": { "client": [
 			{
-				"file": "default.conf", "target": "~/conf.d/"
+				"file": "default.conf", "target": "~/tutorial/conf.d/"
 			}
 		]}
 	},
