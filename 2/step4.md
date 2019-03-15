@@ -8,9 +8,6 @@ Copy the content of this file into the editor:
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
 
-ENV PING_HOST=localhost
-
-RUN echo "Building version ${VERSION_STRING}"
 RUN adduser -u 1000 -D -h /home/testuser -g "Test User" testuser
 RUN apk add iputils
 
@@ -34,15 +31,12 @@ Copy the content of this file into the editor:
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
 
-ENV PING_HOST=localhost
-
-RUN echo "Building version ${VERSION_STRING}"
 RUN adduser -u 1000 -D -h /home/testuser -g "Test User" testuser
 RUN apk add iputils
 
 USER testuser
 
-CMD ping -c 3 ${PING_HOST}
+CMD ping -c 3 localhost
 </pre>
 
 Issue the `docker build` command with the parameter `--buil-darg`:
@@ -60,9 +54,6 @@ Look at the following example:
 
 <pre class="file" data-filename="Dockerfile" data-target="replace">FROM alpine:latest
 
-ENV PING_HOST=localhost
-
-RUN echo "Building version ${VERSION_STRING}"
 RUN adduser -u 1000 -D -h /home/testuser -g "Test User" testuser
 RUN apk add iputils
 
