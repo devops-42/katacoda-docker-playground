@@ -17,8 +17,11 @@
 		{
 			"title": "Docker images - Dockerfile (2)",
 			"text": "step4.md"
-		}
-		],
+		},
+		{
+			"title": "Docker images - Dockerfile (3)",
+			"text": "step5.md"
+		}],
 		"intro": {
 			"text": "intro.md"
 		},
