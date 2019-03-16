@@ -9,26 +9,26 @@ Copy the content of this file into the editor:
 
 services:
     db:
-      image: mysql
-      command: --default-authentication-plugin=mysql_native_password
-      environment:
-        - MYSQL_DATABASE=katacoda
-        - MYSQL_USER=katacoda
-        - MYSQL_PASSWORD=password
-        - MYSQL_ROOT_PASSWORD=mysql
-      volumes:
-        - ./db:/var/lib/mysql
-      ports:
-        - "3306:3306"
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            - MYSQL_DATABASE=katacoda
+            - MYSQL_USER=katacoda
+            - MYSQL_PASSWORD=password
+            - MYSQL_ROOT_PASSWORD=mysql
+        volumes:
+            - ./db:/var/lib/mysql
+        ports:
+            - "3306:3306"
     phpmyadmin:
-     image: phpmyadmin/phpmyadmin
-     environment:
-       - PMA_ARBITRARY: 1
-       - MYSQL_USER: katacoda
-       - MYSQL_PASSWORD: password
-       - MYSQL_ROOT_PASSWORD: mysql
-     ports:
-       - "80:80"
+        image: phpmyadmin/phpmyadmin
+        environment:
+            - PMA_ARBITRARY=1
+            - MYSQL_USER=katacoda
+            - MYSQL_PASSWORD=password
+            - MYSQL_ROOT_PASSWORD=mysql
+        ports:
+            - "80:80"
 volumes:
     db:
         driver: "local"
