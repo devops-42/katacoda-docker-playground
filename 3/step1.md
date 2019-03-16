@@ -18,6 +18,8 @@ To start the container with the configuration run:
 
 `docker-compose up -d`{{execute}}
 
-The `-d` flag means `detached` i.e. the container will started in background mode. 
+The `-d` flag means `detached` i.e. the container will started in background mode. If the container started successfully, `docker-compose` returns:
+
+`Creating web ... <span style="color:blue">done</span>`
  
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
