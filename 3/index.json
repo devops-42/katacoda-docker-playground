@@ -6,7 +6,11 @@
 			{
 			  "title": "Docker compose - Basics",
 			  "text": "step1.md"
-		  }
+		  },
+			{
+				"title": "Docker compose - More than one container",
+				"text": "step2.md"
+			}
 		],
 		"intro": {
 			"text": "intro.md",
