@@ -39,3 +39,5 @@ To start the services run:
 `docker-compose up -d`{{execute}}
  
 The service `phpmyadmin` exposes a HTTP port, it is accessible below this link: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+
+Just login to Host `db` with the login and password provided in the environment section.
