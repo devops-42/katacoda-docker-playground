@@ -4,7 +4,7 @@
 	"details": {
 		"steps": [
 			{
-			  "title": "Docker images - Commit",
+			  "title": "Docker compose - Basics",
 			  "text": "step1.md"
 		  }
 		],
