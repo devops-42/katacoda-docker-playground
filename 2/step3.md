@@ -11,7 +11,7 @@ ARG VERSION_STRING
 RUN echo "Building version ${VERSION_STRING}"
 </pre>
 
-Issue the `docker build` command with the parameter `--buil-darg`:
+Issue the `docker build` command with the parameter `--build-arg`:
 
 `docker build --build-arg VERSION_STRING=1.0 -t dockerfundamentals-echo:alpine .`{{execute}}
 
