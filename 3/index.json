@@ -10,6 +10,10 @@
 			{
 				"title": "Docker compose - More than one container",
 				"text": "step2.md"
+			},
+            {
+				"title": "Docker compose - Build and run",
+				"text": "step3.md"
 			}
 		],
 		"intro": {
@@ -19,9 +23,14 @@
 		"finish": {
 			"text": "finish.md"
 		},
-		"assets": { "host01": [
+		"assets": { 
+          "host01": [
 			{
 				"file": "default.conf", "target": "~/tutorial/conf.d/"
+			}],
+          "client": [
+            {
+				"file": "Dockerfile", "target": "~/tutorial/web/"
 			}
 		]}
 	},
