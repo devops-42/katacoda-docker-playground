@@ -47,7 +47,7 @@ Issue the `docker build` command:
 
 Run the image, the container should ping the localhost three times.
 
-`docker run --rm -ti dockerfundamentals-ping:alpine /bin/sh`{{execute}}
+`docker run --rm dockerfundamentals-ping:alpine`{{execute}}
 
 
 ### `ENTRYPOINT` and `CMD` combined
