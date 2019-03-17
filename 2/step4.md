@@ -16,6 +16,8 @@ USER testuser
 ENTRYPOINT ["ping", "-c", "3", "localhost"]
 </pre>
 
+Issue the `docker build` command:
+
 `docker build -t dockerfundamentals-ping:alpine .`{{execute}}
 
 `docker run --rm dockerfundamentals-ping:alpine`{{execute}}
@@ -39,7 +41,7 @@ USER testuser
 CMD ping -c 3 localhost
 </pre>
 
-Issue the `docker build` command with the parameter `--build-arg`:
+Issue the `docker build` command:
 
 `docker build -t dockerfundamentals-ping:alpine .`{{execute}}
 
