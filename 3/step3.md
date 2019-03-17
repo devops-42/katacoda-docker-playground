@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
       context: ./web
     ports:
-      - 8080:80
+      - 80:8080
 </pre>
 
 To build the service run:
