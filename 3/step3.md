@@ -10,9 +10,13 @@ services:
     ports:
       - 8080:80
 </pre>
- 
+
+To build the service run:
+
+`docker-compose build`{{execute}}
+
 To start the services run:
 
 `docker-compose up -d`{{execute}}
  
-The service `phpmyadmin` exposes a HTTP port, it is accessible below this link: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
+The service `web` exposes a HTTP port, it is accessible below this link: https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/
