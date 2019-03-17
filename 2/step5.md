@@ -19,7 +19,7 @@ ENTRYPOINT ["ls", "-l", "/home/testuser"]
 
 Build and run:
 
-`docker build  -t dockerfundamentals-echo:alpine . && docker run dockerfundamentals-echo:alpine`{{execute}}
+`docker build -t dockerfundamentals-copy:alpine . && docker run --rm dockerfundamentals-copy:alpine`{{execute}}
 
 The container starts and prints out the content of the `/home/testuser` directory. As you can see, the file `README.md` has been added properly.
 
@@ -44,6 +44,6 @@ ENTRYPOINT ["ls", "-l", "/home/testuser"]
 
 Build and run:
 
-`docker build  -t dockerfundamentals-echo:alpine . && docker run dockerfundamentals-echo:alpine`{{execute}}
+`docker build -t dockerfundamentals-add:alpine . && docker run --rm dockerfundamentals-add:alpine`{{execute}}
 
 The container starts and prints out the content of the `/home/testuser` directory. As you can see, the file `README.md` has been added properly.
