@@ -78,7 +78,7 @@ When querying the list of locally available Docker images again, the new created
 
 Now you can instantiate a container from the changed image (we use another port here to avoid port binding conflicts):
 
-`docker run --name webnew -d -p 80:80 nginx:committed-by-user`{{execute}}
+`docker run --name webnew -d -p 8080:80 nginx:committed-by-user`{{execute}}
 
 Verify that the testfile is present:
 
