@@ -85,3 +85,7 @@ Verify that the testfile is present:
 `docker exec -ti webnew /bin/bash`{{execute}}
 
 `stat testfile`{{execute}}
+
+Exit the container:
+
+`exit`{{execute}}
